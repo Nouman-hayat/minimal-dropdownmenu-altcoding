@@ -1,0 +1,109 @@
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+  font-family: sans-serif;
+}
+nav{
+  background: green;
+  width: 400px;
+  line-height: 40px;
+  padding: 8px 25px;
+  border-radius: 5px;
+  position: absolute;
+  top: 5%;
+  left: 2%;
+  
+  
+}
+nav label{
+  font-size: 22px;
+  font-weight: 500;
+  display: block;
+  color: white;
+  cursor: pointer;
+}
+.dropdown-button span{
+  float: right;
+  line-height: 40px;
+  transition: 0.5s;
+}
+.dropdown-button span.rotate{
+  transform: rotate(-180deg);
+  -webkit-transform: rotate(-180deg);
+  -moz-transform: rotate(-180deg);
+  -ms-transform: rotate(-180deg);
+  -o-transform: rotate(-180deg);
+}
+nav ul{
+   top: 75px;
+  left: 0;
+  width: 100%;
+  border-radius: 5px;
+  display: none;
+  position: absolute;
+  background: green;
+  list-style: none;
+ 
+}
+[id^=btn]:checked + ul{
+  display: block;
+}
+nav .menu:before{
+  background: green;
+  right: 20px;
+  top: -10px;
+  transform: rotate(45deg);
+  z-index: -1;
+  position: absolute;
+  content: '';
+  height: 20px;
+  width: 20px;
+  
+}
+nav ul li{
+  line-height: 40px;
+  padding: 8px 20px;
+  cursor: pointer;
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+nav ul li label{
+  font-size: 18px;
+}
+nav ul li a{
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  display: block;
+}
+nav ul li a:hover,
+nav ul li label:hover{
+  color: black;
+}
+nav ul ul{
+  position: static;
+}
+nav ul ul li{
+  line-height: 30px;
+  padding-left: 30px;
+  border-bottom: none;
+}
+nav ul ul li a{
+  color: #e6e6e6;
+  font-size: 17px;
+}
+nav ul li span{
+  font-size: 20px;
+  float: right;
+  margin-top: 10px;
+  padding: 0 10px;
+  transition: 0.5s;
+}
+nav ul li span.rotate{
+  transform: rotate(-180deg);
+}
+input{
+  display: none;
+}
